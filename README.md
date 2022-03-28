@@ -77,6 +77,19 @@ We attempted to transfer learning by utilizing the pre-trained VGG16 model and a
 | Training Set Loss | 0.0622 | 0.141 | 0.0442 |
 | Test Set Accuracy | 1.0 | 1.0 | 1.0 |
 
+## Model Deployment Architecture
+
+Automating development, deployment, and maintenance of Machine Learning (ML) models with best practices is crucial for Machine Learning Operations (MLOps). Our method will be based on the Cross-Industry Standard Process for Data Mining (CRISP-DM), which provides a framework for conceptualizing the continuous data mining lifecycle. A key component of this process is establishing measurable business value, as well as planning for how the solution will be maintained. With that goal in mind, our team has put together a deployment architecture inspired by CRISP-DM that meets the business acceptance criteria in production. 
+
+![Model Deployment Architecture](README%20Figures/modeldeploymentarchitecture.png)\
+**Figure 6.** Model Deployment Architecture
+
+In keeping with the MLOps philosophy of continuous improvement, we will ensure the following criteria are in place as model health monitoring guidelines: 
+
+* Observe any changes that could affect the prediction of the model in unexpected ways. 
+* Fine-tune and retrain the model periodically to prevent staleness and evaluate the data quantitatively and qualitatively. 
+* Educate the new team members if a model ownership change occurs. 
+
 ## Limitations
 A limitation of the dataset is the similar skin tone of the signing hand and homogeneous background that were present in all images. As such, the risk of model overfitting is likely high. To remedy this issue, training with a set of images that are diverse in time of day, signing hand skin tones, lighting conditions, and locations is suggested. A diverse training set should yield a more generalizable solution for use in real-world settings.
 
